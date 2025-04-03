@@ -1,4 +1,4 @@
-# hacker vibe, simplistic guest book built using Go
+# A hacker theme, simplistic guest book built using Golang
 
 I created a simple web-based guestbook with pure Golang. Users can leave messages that are stored in a .txt file and displayed on the homepage. This was a simple, clean project to learn more about backend web development with Go's standard library.
 
@@ -42,7 +42,7 @@ It was a good opportunity to practice clean code, file structure and some basic 
 
 ## How to Run It
 
-1. Make sure oyu have [Go Installed](https://go.dev/doc/install)
+1. Make sure you have [Go Installed](https://go.dev/doc/install)
 2. Clone this repo:
     ```bash
     git clone https://github.com/your-username/go-guestbook.git
