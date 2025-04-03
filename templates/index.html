@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guestbook</title>
+    <style>
+        body {
+            background-color: black;
+            color: #20c20e;
+            font-family: monospace;
+            margin:  25px;
+        }
+
+        input, textarea {
+            background-color: #222;
+            color: white;
+            border: 1px solid #555;
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        input[type="submit"] {
+            background: #333;
+            cursor: pointer;
+            border: 1px solid #444;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+
+        h1, h2 {
+            border-bottom: 1px solid #444;
+            padding-bottom: 4px;
+        }
+
+        form {
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Guestbook!</h1>
+    <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <br>
+
+        <label for="message">Message:</label>
+        <br>
+        <textarea name="message" id="message" rows="4" cols="40" required></textarea>
+        <br>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Messages</h2>
+    {{range .}}
+        <p><strong>{{.Name}}:</strong> {{.Content}}</p>
+    {{else}}
+        <p>No Messages yet.</p>
+    {{end}}
+</body>
+</html>
